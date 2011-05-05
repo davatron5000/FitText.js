@@ -63,7 +63,7 @@ footer{
 	border-top: .12em solid #f4f1de;
 	padding-top: 2%;
 	margin-top: 3%;
- 	display: inline-block;
+ 	display: block;
  	font-size: .8em;}
 
 h1 {
