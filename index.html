@@ -1,1 +1,53 @@
-FitText.js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>FitText - A plugin for inflating web type</title>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+
+	<!-- stylesheets -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	
+	<!-- javascripts -->
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script type="text/javascript" src="http://use.typekit.com/opn1ucr.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="js/jquery.lettering-0.6.1.min.js"></script>
+ 	<script src="js/jquery.fittext.js"></script>
+ 	<script type="text/javascript">
+	 $(document).ready(function() {
+    $("h1").lettering();
+  	});
+	</script>
+	
+</head>
+
+<body>
+
+<div class="container">
+	<header>
+		<h1>FitText</h1>
+		<p class="download">A jQuery plugin for inflating web type <a href="">Download on Github</a></p>
+	</header>
+	<section id="features" class="details">
+		<p>FitText makes font-sizes flexible. Use this plugin on your fluid or responsive layout to achieve scalable headlines that fill the width of a parent element.</p>
+		<img src="img/fittext_screens.png" alt="screenshots"/>
+		<p>Oh, and don't you dare let us catch you using FitText on paragraph text. This is for gigantic display text only!</p>
+	</section>
+	<footer>
+	<p>FitText is brought to you by <a href="http://paravelinc.com">Paravel</a>, as is <a href="http://letteringjs.com">Lettering.js</a>. Follow <a href="http://twitter.com/trentwalton" class="trent">Trent</a>, <a href="http://twitter.com/davatron5000" class="dave">Dave</a> and <a href="http://twitter.com/raygunray" class="reagan">Reagan</a> on Twitter.</p>
+	</footer>
+	
+	
+	<script type="text/javascript">
+		$("h1").fitText(0.273);
+	</script>
+	<script type="text/javascript">
+		$(".download").fitText(2);
+	</script>
+
+
+	
+</body>
+</html>
