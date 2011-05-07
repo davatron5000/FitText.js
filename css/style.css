@@ -70,7 +70,8 @@ h1 {
 	text-align: center;
 	text-indent: -.12em;
 	color: #f4f1de;
-	font: bold 10px "anchor-web-1","anchor-web-2";
+	font: 10px "anchor-web-1","anchor-web-2";
+	font-weight: 900;
 	display: inline-block;
 	margin: 0 auto;
 	line-height: 1;
