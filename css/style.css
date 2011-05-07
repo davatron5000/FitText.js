@@ -24,9 +24,9 @@ a:hover{
 
  	
 .download a{
- 	background-size:100%;
  	padding: .095em .8em;
  	background: url(../img/arrow.png) no-repeat;
+ 	background-size:100%;
  	margin-left: .4em;
  	-webkit-transition: margin 0.15s ease-out;
 	-moz-transition: margin 0.15s ease-out;
