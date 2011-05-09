@@ -25,7 +25,7 @@ This will hopefully give you a level of "control" that might not be pixel perfec
 * Set your target headline to `width: 100%` in your CSS.  And if you set a font-size, this will act like a `max-font-size`.
 * Be ready to tweak till everything balances out.
 * So far, FitText seems to work with other fun properties like text-shadow
-* It also works with [Lettering.js](http://github.com/davatron5000/Lettering.js)! #synergy
+* It also works with [Lettering.js #synergy](http://github.com/davatron5000/Lettering.js)!
 
 ## Disclaimers
 This is the part of the show where we cover our butts.
