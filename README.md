@@ -27,7 +27,14 @@ This will hopefully give you a level of "control" that might not be pixel perfec
 * So far, FitText seems to work with other fun properties like text-shadow
 * It also works with [Lettering.js](http://github.com/davatron5000/Lettering.js)! #synergy
 
-### Disclaimers & Forks
+## Disclaimers
+This is the part of the show where we cover our butts.
+
+### Intended for Fluid Width Designs
+We built this to satisfy a need for fluid resizing text on responsive designs. Mostly for use on [Trent Walton's blog](http://trentwalton.com) which he's using it all over). If you're not going fluid and/or want exact fitting text, we recommend checking out [BigText](https://github.com/zachleat/BigText) by Zach Leatherman.
+
+### Fallbacks
 As always, use JavaScript with caution: plan for no-js fallbacks that you are comfortable with.
 
-Also please Download, Fork, & Commit. We'd love your see your ideas.
+### For Forks' Sake
+If you think you can make this better, please Download, Fork, & Commit. We'd love your see your ideas.
