@@ -19,17 +19,15 @@
 				var compressor = kompressor || 1;            // set the compressor
 
         // Resizer() resizes items based on the object width divided by the compressor * 10
-				var resizer = function ( obj ) {
-					obj.css('font-size', Math.min(obj.width() / (compressor*10), origFontSize));
-				}
+				var resizer = function () {
+					$this.css('font-size', Math.min(obj.width() / (compressor*10), origFontSize));
+				};
 
 				// Call once to set.
-				resizer($this);
+				resizer();
 				
 				// Call on resize. Opera debounces their resize by default. 
-      	$(window).resize(function() {
-					resizer($this);
-      	});
+      	$(window).resize(resizer);
       	
 			});
 
