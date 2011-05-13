@@ -33,6 +33,9 @@ This is the part of the show where we cover our butts.
 ### Intended for Fluid Width Designs
 We built this to satisfy a need for fluid resizing text on responsive designs. Mostly for use on [Trent Walton's blog](http://trentwalton.com), which he's using it all over. If you're not going fluid and/or want exact fitting text, we recommend checking out [BigText](https://github.com/zachleat/BigText) by Zach Leatherman.
 
+### window.resize() tsk tsk tsk...
+If you oppose `window.resize()`, it's worth mentioning that @chriscoyier created a fork of [FitText using a debounced resize method](https://github.com/chriscoyier/FitText.js). 
+
 ### Fallbacks
 As always, use JavaScript with caution: plan for no-js fallbacks that you are comfortable with.
 
