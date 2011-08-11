@@ -16,22 +16,23 @@
 			max-width:1140px;
 		}
 		header {
+			background: rgba(0,0,0,0.2);
+			margin:5% auto;
+			padding: 2% 0;
+			text-align: center;
 			width: 100%;
-			margin:0px auto;
 		}
 		h1 {
-			background: rgba(0,0,0,0.2);
-			text-align: center;
 			color:#fff;
 			font: 95px/1 "Impact";
-			text-transform: uppercase;
 			display: inline-block;
+			margin: 0;	
 			text-shadow:#253e45 -1px 1px 0,
 			#253e45 -2px 2px 0,
 			#d45848 -3px 3px 0,
 			#d45848 -4px 4px 0;
-			width: 100%;
-			margin: 5% auto 5%;
+			text-transform: uppercase;
+			white-space: nowrap;
 		}
 	</style>
 
@@ -50,7 +51,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
  	<script src="jquery.fittext.js"></script>
 	<script type="text/javascript">
-		$("#fittext").fitText(1.2);
+		$("#fittext").fitText();
 	</script>
 	
 </body>

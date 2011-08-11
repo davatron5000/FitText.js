@@ -10,27 +10,16 @@ If you're working on a responsive design, take whatever headline you'd like to s
       $("#responsive_headline").fitText();
     </script>
 
-[Pretty Cool](http://www.hulu.com/watch/194733/saturday-night-live-miley-cyrus-show). Your text will now resize based on the width of the item. (by default: ~1/10th of the element's width).
+[Pretty Cool](http://www.hulu.com/watch/194733/saturday-night-live-miley-cyrus-show). Your text will now resize based on the width and height of the item.
 
-### The Compressor
-The default setting works pretty well, but when it doesn't FitText has one setting you can adjust. If your text resizes poorly or is resizing all hurdy gurdy, you'll want to turn tweak up/down the compressor. It works a little like a guitar amp.
-
-    $("#responsive_headline").fitText(1.2); // turn the compressor up (font will shrink a bit more aggressively)
-    $("#responsive_headline").fitText(0.8); // turn the compressor down (font will shrink less aggressively)
-    
-This will hopefully give you a level of "control" that might not be pixel perfect, but scales smoothly & nicely.
-
-## 3-Step Setup
+## 2-Step Setup
 
 * Add all the Javascripts (jQuery, FitText and `$(element).fitText();` block) as described above.
-* Set your `font-size` in your CSS.  This will make act like a max-font-size.
 * Squeeze your browser.
 
 ## CSS Tips
 
-* Set your target headline to `width: 100%` in your CSS. 
-* Set a font-size, this will act like a `max-font-size`.
-* Be ready to tweak till everything balances out.
+* Set your target headline to `white-space: nowrap; width: auto;`
 * So far, FitText seems to work with other fun properties like text-shadow
 * It also works with [Lettering.js #synergy](http://github.com/davatron5000/Lettering.js)!
 
