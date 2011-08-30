@@ -4,11 +4,11 @@ body {
 	background: #c44032;
 	color: #f4f1de;
 	font-size: 100%;
-	font-family: "proxima-nova-1","proxima-nova-2", sans-serif;
+	font-family: "proxima-nova-1","proxima-nova-2", 'Arial', sans-serif;
 }
 
 .download{
-	font: 10px "anchor-web-1","anchor-web-2", sans-serif;
+	font: 36px "anchor-web-1","anchor-web-2", 'Arial Narrow' sans-serif;
  	text-align: left;
  	margin-bottom: 0px;}
 
@@ -70,7 +70,7 @@ h1 {
 	text-align: center;
 	text-indent: -.12em;
 	color: #f4f1de;
-	font: 10px "anchor-web-1","anchor-web-2", sans-serif;
+	font: 220px "anchor-web-1","anchor-web-2", 'Impact', sans-serif;
 	font-weight: 900;
 	display: inline-block;
 	margin: 0 auto;
