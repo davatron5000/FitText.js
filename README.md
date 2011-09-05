@@ -25,6 +25,13 @@ FitText now allows you to specify two optional pixel values: `minFontSize` and `
 
     $("#responsive_headline").fitText(1.2, { minFontSize: '20px', maxFontSize: '40px' })
 
+### _new:_ minWidth & max Width
+
+FitText now allows two optional window width pixel values: `minWidth` and `maxWidth`. Useful for responsive design scenarios when FitText should only be used at certain window sizes.
+
+	// Will only invoke FitText if window width >= 480px
+	$("#responsive_headline").fitText(1.2, {minWidth:480});
+
 ## CSS Tips
 
 * Make sure your headline is `display: block;` or 	`display: inline-block;` with a specified width, i.e. `width: 100%`. 
@@ -32,6 +39,7 @@ FitText now allows you to specify two optional pixel values: `minFontSize` and `
 * FitText now ignores your CSS file's font-size, but be sure to set one as a non-javascript fallback.
 
 ## Changelog
+* `v 1.2` = FitText allows minWidth and maxWidth options to enable/disable for certain window widths
 * `v 1.1` - FitText now ignores font-size and has minFontSize & maxFontSize options
 * `v 1.0.1` - Fix for broken font-size.
 * `v 1.0` - Initial Release
