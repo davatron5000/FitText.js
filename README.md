@@ -30,6 +30,7 @@ FitText now allows you to specify two optional pixel values: `minFontSize` and `
 * Make sure your headline is `display: block;` or 	`display: inline-block;` with a specified width, i.e. `width: 100%`. 
 * Be ready to tweak till everything balances out.
 * FitText now ignores your CSS file's font-size, but be sure to set one as a non-javascript fallback.
+* Make sure your element is appended to document before setting fitText. e.g. `$('<div>').fitText()` will NOT work
 
 ## Changelog
 * `v 1.1` - FitText now ignores font-size and has minFontSize & maxFontSize options
