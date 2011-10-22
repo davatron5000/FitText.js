@@ -1,4 +1,4 @@
-/*global jQuery */
+/*global jQuery or Ender */
 /*!	
 * FitText.js 1.0
 *
