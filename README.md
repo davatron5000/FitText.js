@@ -25,6 +25,11 @@ FitText now allows you to specify two optional pixel values: `minFontSize` and `
 
     $("#responsive_headline").fitText(1.2, { minFontSize: '20px', maxFontSize: '40px' })
 
+### Resetting
+You can reset all fitted text so that it will fallback to CSS defaults by triggering the "fittext-reset" event.
+
+    $(document).trigger("fittext-reset");
+
 ## CSS Tips
 
 * Make sure your headline is `display: block;` or 	`display: inline-block;` with a specified width, i.e. `width: 100%`. 
