@@ -10,14 +10,14 @@
 */
 
 (function( $ ){
-	
+
   $.fn.fitText = function( kompressor, options ) {
-	    
+
     var settings = {
       'minFontSize' : Number.NEGATIVE_INFINITY,
       'maxFontSize' : Number.POSITIVE_INFINITY
     };
-	
+
     return this.each(function(){
       var $this = $(this);              // store the object
 		  var compressor = kompressor || 1; // set the compressor
@@ -33,10 +33,10 @@
 
       // Call once to set.
       resizer();
-				
-      // Call on resize. Opera debounces their resize by default. 
-      $(window).resize(resizer);
-      	
+
+      // Call on resize. Opera debounces their resize by default.
+      $(window).on("resize.fittext",resizer);
+      
     });
 
   };
