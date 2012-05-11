@@ -1,4 +1,14 @@
-//FitText.js
+/*global jQuery */
+/*!  
+* FitText.js updated - by Phil Ricketts
+*
+* This is a fork of FitText.js 1.0 by Dave rupert http://daverupert.com
+*
+* Released under the WTFPL license 
+* http://sam.zoy.org/wtfpl/
+*
+* Updated 11/05/2012
+*/
 (function( $ ){
 
 	$.fn.fitText = function( kompressor, options ) {
