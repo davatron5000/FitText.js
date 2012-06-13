@@ -12,19 +12,18 @@
 (function( $ ){
 	
   $.fn.fitText = function( kompressor, options ) {
-	    
-    var settings = {
-      'minFontSize' : Number.NEGATIVE_INFINITY,
-      'maxFontSize' : Number.POSITIVE_INFINITY
-    };
+	   
+    // Setup options
+    var compressor = kompressor || 1,
+        settings = $.extend({
+          'minFontSize' : Number.NEGATIVE_INFINITY,
+          'maxFontSize' : Number.POSITIVE_INFINITY
+        }, options);
 	
     return this.each(function(){
-      var $this = $(this);              // store the object
-		  var compressor = kompressor || 1; // set the compressor
-        
-      if ( options ) { 
-        $.extend( settings, options );
-      }
+
+      // Store the object
+      var $this = $(this); 
         
       // Resizer() resizes items based on the object width divided by the compressor * 10
       var resizer = function () {
@@ -35,7 +34,7 @@
       resizer();
 				
       // Call on resize. Opera debounces their resize by default. 
-      $(window).resize(resizer);
+      $(window).on('resize', resizer);
       	
     });
 
