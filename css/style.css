@@ -1,5 +1,3 @@
-/* @override http://localhost:8888/css/style.css */
-
 body {
 	background: #c44032;
 	color: #f4f1de;
@@ -44,7 +42,7 @@ p{
 
 .container {
 	width: 80%;
-	max-width: 1500px;
+	max-width: 1440px;
 	margin: 0 auto;
  	background-colord: #da4838;}
 
@@ -109,24 +107,29 @@ h1 span.char4 {
 ::selection { background: rgba(255,255,255, .3); color: #fefcf2;  } 
 
 
-/*@media screen and (min-width: 700px) and (max-width:1500px) {*/
-@media screen and (max-width:480px) {
+
+@media screen and (min-width: 650px) and (max-width:1099px) {
 	p{	
-	font-size: .9em;
+	font-size: 1.5em;
 	}
 }
 
 
-@media screen and (min-width: 700px) and (max-width:1199px) {
-	p{	
-	font-size: 1.4em;
-	}
-}
-
-
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1100px) {
 	p{	
 	font-size: 2em;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	p{	
+	font-size: 2.3em;
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	p{	
+	font-size: 2.75em;
 	}
 }
 
