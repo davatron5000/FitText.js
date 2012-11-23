@@ -49,4 +49,4 @@ If you want more exact fitting text, there's a plugin for that! We recommend che
 If you oppose `window.resize()`, it's worth mentioning that @chriscoyier created a fork of [FitText using a debounced resize method](https://github.com/chriscoyier/FitText.js). 
 
 ### Download, Fork, Commit.
-If you think you can make this better, please Download, Fork, & Commit. We'd love your see your ideas.
+If you think you can make this better, please Download, Fork, & Commit. We'd love to see your ideas.
