@@ -25,10 +25,17 @@
       // Store the object
       var $this = $(this); 
         
+<<<<<<< HEAD
+        // Resizer() resizes items based on the object width divided by the compressor * 10
+				var resizer = function () {
+					$this.css('font-size', Math.round(Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize))));
+				};
+=======
       // Resizer() resizes items based on the object width divided by the compressor * 10
       var resizer = function () {
         $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
       };
+>>>>>>> davatron5000/master
 
       // Call once to set.
       resizer();
