@@ -1,5 +1,8 @@
 {
   "name": "FitText.js",
-  "version": "1.0",
-  "main": "./jquery.fittext.js"
+  "version": "1.0.0",
+  "main": "./jquery.fittext.js",
+  "dependencies": {
+    "jquery": ">= 1.6"
+  }
 }
