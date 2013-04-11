@@ -39,7 +39,13 @@ jQuery("#responsive_headline").fitText(1.2, { minFontSize: '20px', maxFontSize: 
 - Set a No-JS fallback font-size in your CSS.
 - Fire
 
+## Don't use jQuery?
+That's okay. Check out these handy non-jQuery versions maintained by other people.
+
+- [non-jQuery FitText](https://github.com/adactio/FitText.js) from @adactio
+
 ## Changelog
+* `v 1.2` - Added `onorientationchange` event
 * `v 1.1` - FitText now ignores font-size and has minFontSize & maxFontSize options
 * `v 1.0.1` - Fix for broken font-size.
 * `v 1.0` - Initial Release
