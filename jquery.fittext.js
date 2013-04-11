@@ -32,10 +32,10 @@
 
       // Call once to set.
       resizer();
-				
-      // Call on resize. Opera debounces their resize by default. 
-      $(window).on('resize', resizer);
-      	
+
+      // Call on resize. Opera debounces their resize by default.
+      $(window).on('resize orientationchange', resizer);
+
     });
 
   };
