@@ -1,12 +1,12 @@
-# FitText.js, a Zepto or jQuery plugin for inflating web type
+# FitText.js, a jQuery plugin for inflating web type
 FitText makes font-sizes flexible. Use this plugin on your responsive design for ratio-based resizing of your headlines.
 
 ## How it works
 Here is a simple FitText setup:
 
 ```html
-/* global Zepto or jQuery */
-<script src="fittext.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="jquery.fittext.js"></script>
 <script>
   jQuery("#responsive_headline").fitText();
 </script>
@@ -28,7 +28,7 @@ This will hopefully give you a level of "control" that might not be pixel perfec
 FitText now allows you to specify two optional pixel values: `minFontSize` and `maxFontSize`. Great for situations when you want to preserve hierarchy.
 
 ```javascript
-$("#responsive_headline").fitText(1.2, { minFontSize: '20px', maxFontSize: '40px' })
+jQuery("#responsive_headline").fitText(1.2, { minFontSize: '20px', maxFontSize: '40px' })
 ```
 
 ## CSS FAQ
@@ -39,13 +39,12 @@ $("#responsive_headline").fitText(1.2, { minFontSize: '20px', maxFontSize: '40px
 - Tweak until you like it.
 - Set a No-JS fallback font-size in your CSS.
 
-## Don't use Zepto or jQuery?
+## Don't use jQuery?
 That's okay. Check out these handy non-jQuery versions maintained by other people.
 
 - [non-jQuery FitText](https://github.com/adactio/FitText.js) from @adactio
 
 ## Changelog
-* Fork/Patch: - Detect and prefer Zepto
 * `v 1.2` - Added `onorientationchange` event
 * `v 1.1` - FitText now ignores font-size and has minFontSize & maxFontSize options
 * `v 1.0.1` - Fix for broken font-size.
