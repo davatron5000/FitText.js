@@ -23,7 +23,7 @@
     return this.each(function(){
 
       // Store the object
-      var $this   = $(this);
+      var $this = $(this);
 
       // Get initial letter & word spacing (converts to px units)
       var size  = parseInt($this.css('font-size')); 
