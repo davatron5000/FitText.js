@@ -25,9 +25,13 @@
       // Store the object
       var $this = $(this);
 
-      // Resizer() resizes items based on the object width divided by the compressor * 10
+      $this.css("white-space", "nowrap");
+
+      var fontWidthRate = $this.css("float", "left").width() / parseFloat($this.css("float", "none").css("font-size"));
+
+      // Resizer() resizes items based on the object width divided by the compressor * fontWidthRate
       var resizer = function () {
-        $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+        $this.css('font-size', Math.max(Math.min($this.width() / (compressor*fontWidthRate), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
       };
 
       // Call once to set.
