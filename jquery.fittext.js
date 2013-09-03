@@ -27,7 +27,10 @@
 
       // Resizer() resizes items based on the object width divided by the compressor * 10
       var resizer = function () {
-        $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+		var valFontSize = Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize));
+	  
+		var cachedStyle = document.getElementById($this.attr('id')).style;
+		cachedStyle.fontSize = valFontSize;        
       };
 
       // Call once to set.
