@@ -29,7 +29,7 @@
       var resizer = function () {
 		$this[0].style.fontSize = Math.max(
 			Math.min(
-				$this[0].style.width / (compressor*10),
+				$this[0].width() / (compressor*10),
 				parseFloat(settings.maxFontSize)
 			),
 			parseFloat(settings.minFontSize)
