@@ -26,14 +26,14 @@
       var $this = $(this);
 
       // Resizer() resizes items based on the object width divided by the compressor * 10
-      var resizer = function () { 
-		$this[0].style.fontSize = Math.max(
-			Math.min(
-				$this[0].clientWidth / (compressor*10),
-				parseFloat(settings.maxFontSize)
-			),
-			parseFloat(settings.minFontSize)
-		).toFixed(2) +'px'; // Don't forget to add PX value or it breaks
+      var resizer = function () {
+        $this[0].style.fontSize = Math.max(
+          Math.min(
+            $this.width() / (compressor*10),
+            parseFloat(settings.maxFontSize)
+          ),
+          parseFloat(settings.minFontSize)
+        ) +'px'; // Don't forget to add PX value or it breaks
       };
 
       // Call once to set.
