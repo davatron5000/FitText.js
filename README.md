@@ -43,6 +43,7 @@ jQuery("#responsive_headline").fitText(1.2, { minFontSize: '20px', maxFontSize: 
 That's okay. Check out these handy non-jQuery versions maintained by other people.
 
 - [non-jQuery FitText](https://github.com/adactio/FitText.js) from @adactio
+- [Angular.js FitText.js](https://github.com/patrickmarabeas/AngularJS-FitText.js) from @patrickmarabeas
 
 ## Changelog
 * `v 1.2` - Added `onorientationchange` event
