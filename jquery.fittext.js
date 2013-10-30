@@ -23,17 +23,16 @@
     return this.each(function(){
 
       // Store the object & save previous position value
-      var $this = $(this),
-          oldPos = $this.css('position');
+      var $this = $(this);
 
       // Temporarily force all the text onto one line and allow the element's width to expand to accommodate it
-      $this.css({'white-space':'nowrap','position':'absolute'});
+      $this.css({'white-space':'nowrap','position':'absolute','width':'auto'});
 
       // Calculate compressor ratio for this typeface
       compressor = parseFloat($this.width()) / parseFloat($this.css('font-size'));
 
-      // Reset the position value. Leaving white-space:nowrap provides some wriggle room for rounding errors
-      $this.css({'position':oldPos});
+      // Reset the temporary css values. Leaving white-space:nowrap provides some wriggle room for rounding errors
+      $this.css({'position':'','width':''});
 
       // Resizer() resizes items based on the object width divided by the compressor
       // Using Math.floor helps avoid browser rounding errors.
