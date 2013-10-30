@@ -14,10 +14,12 @@
   $.fn.fitText = function( options ) {
 
     // Setup options
-    var compressor,
+    var fontRatio,
         settings = $.extend({
           'minFontSize' : Number.NEGATIVE_INFINITY,
-          'maxFontSize' : Number.POSITIVE_INFINITY
+          'maxFontSize' : Number.POSITIVE_INFINITY,
+          'lineCount' : 1,
+          'scale': 100
         }, options);
 
     return this.each(function(){
@@ -28,19 +30,16 @@
       // Temporarily force all the text onto one line and allow the element's width to expand to accommodate it
       $this.css({'white-space':'nowrap','position':'absolute','width':'auto'});
 
-      // Calculate compressor ratio for this typeface
-      compressor = parseFloat($this.width()) / parseFloat($this.css('font-size'));
+      // Calculate fontRatio ratio for this typeface
+      fontRatio = parseFloat($this.width()) / parseFloat($this.css('font-size'));
 
-      // Reset the temporary css values. Leaving white-space:nowrap provides some wriggle room for rounding errors
-      $this.css({'position':'','width':''});
+      // Reset the temporary css values.
+      $this.css({'position':'','width':'','white-space':''});
 
-      // Resizer() resizes items based on the object width divided by the compressor
-      // Using Math.floor helps avoid browser rounding errors.
+      // Resizer() resizes items based on the object width divided by the fontRatio
+      // Subtract one px for each line to get around rounding errors
       var resizer = function () {
-        var fontSize = Math.floor(Math.max(Math.min($this.width() / compressor, parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
-        $this.css('font-size', fontSize);
-        //reset white-space property if minFontSize is being used
-        $this.css({'white-space': (fontSize <= parseFloat(settings.minFontSize)) ? 'normal':'nowrap'}); 
+        $this.css('font-size', Math.max(Math.min( ((settings.scale/100) * settings.lineCount * $this.width() / fontRatio) - settings.lineCount, parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
       };
 
       // Call once to set.
