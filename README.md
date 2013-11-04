@@ -31,6 +31,13 @@ FitText now allows you to specify two optional pixel values: `minFontSize` and `
 jQuery("#responsive_headline").fitText(1.2, { minFontSize: '20px', maxFontSize: '40px' })
 ```
 
+## factor
+It is possible to control the factor by which the element's width is divided by, using the optional setting `factor`:
+
+```javascript
+jQuery("#responsive_headline").fitText(1.0, { factor: 5 })
+```
+
 ## CSS FAQ
 
 - **Make sure your container has a width!**
