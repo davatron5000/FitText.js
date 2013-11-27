@@ -1,4 +1,4 @@
-/*global jQuery */
+/*global Zepto or jQuery */
 /*!
 * FitText.js 1.1
 *
@@ -7,6 +7,11 @@
 * http://sam.zoy.org/wtfpl/
 *
 * Date: Thu May 05 14:23:00 2011 -0600
+* 
+* Forked to detect and prefer Zepto over jQuery
+* //github.com/colinhb
+* 
+* Date: Wed Jul 10 22:46:00 2013 -0600
 */
 
 (function( $ ){
@@ -40,4 +45,4 @@
 
   };
 
-})( jQuery );
+})( window.Zepto || window.jQuery );

@@ -1,14 +1,14 @@
-# FitText.js, a jQuery plugin for inflating web type
+# FitText.js, a jQuery/Zepto plugin for inflating web type
 FitText makes font-sizes flexible. Use this plugin on your responsive design for ratio-based resizing of your headlines.
 
 ## How it works
 Here is a simple FitText setup:
 
 ```html
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script src="jquery.fittext.js"></script>
+/* global jQuery/Zepto $ */
+<script src="fittext.js"></script>
 <script>
-  jQuery("#responsive_headline").fitText();
+  $("#responsive_headline").fitText();
 </script>
 ```
 
@@ -18,8 +18,8 @@ Your text should now fluidly resize, by default: Font-size = 1/10th of the eleme
 If your text is resizing poorly, you'll want to turn tweak up/down "The Compressor". It works a little like a guitar amp. The default is `1`.
 
 ```javascript
-jQuery("#responsive_headline").fitText(1.2); // Turn the compressor up   (resizes more aggressively)
-jQuery("#responsive_headline").fitText(0.8); // Turn the compressor down (resizes less aggressively)
+$("#responsive_headline").fitText(1.2); // Turn the compressor up   (resizes more aggressively)
+$("#responsive_headline").fitText(0.8); // Turn the compressor down (resizes less aggressively)
 ```
 
 This will hopefully give you a level of "control" that might not be pixel perfect, but resizes smoothly & nicely.
@@ -39,13 +39,14 @@ jQuery("#responsive_headline").fitText(1.2, { minFontSize: '20px', maxFontSize: 
 - Tweak until you like it.
 - Set a No-JS fallback font-size in your CSS.
 
-## Don't use jQuery?
+## Don't use jQuery/Zepto?
 That's okay. Check out these handy non-jQuery versions maintained by other people.
 
 - [non-jQuery FitText](https://github.com/adactio/FitText.js) from @adactio
 - [Angular.js FitText.js](https://github.com/patrickmarabeas/AngularJS-FitText.js) from @patrickmarabeas
 
 ## Changelog
+* Patch - Detect and prefer Zepto
 * `v 1.2` - Added `onorientationchange` event
 * `v 1.1` - FitText now ignores font-size and has minFontSize & maxFontSize options
 * `v 1.0.1` - Fix for broken font-size.
