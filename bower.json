@@ -4,5 +4,9 @@
   "main": "./jquery.fittext.js",
   "dependencies": {
     "jquery": ">= 1.6"
-  }
+  },
+  "ignore": [
+    "exemple.html",
+    "CONTRIBUTING.md"
+  ]
 }
