@@ -9,7 +9,18 @@
 * Date: Thu May 05 14:23:00 2011 -0600
 */
 
-(function( $ ){
+(function (factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD
+    define(['jquery'], factory);
+  } else if (typeof exports === 'object') {
+    // CommonJS
+    factory(require('jquery'));
+  } else {
+    // Browser globals
+    factory(jQuery);
+  }
+}(function ($) {
 
   $.fn.fitText = function( kompressor, options ) {
 
@@ -40,4 +51,4 @@
 
   };
 
-})( jQuery );
+}));
