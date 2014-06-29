@@ -9,7 +9,15 @@
 * Date: Thu May 05 14:23:00 2011 -0600
 */
 
-(function( $ ){
+(function (factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as an anonymous module.
+        define(['jquery'], factory);
+    } else {
+        // Browser globals
+        factory(jQuery);
+    }
+} (function( $ ){
 
   $.fn.fitText = function( kompressor, options ) {
 
@@ -40,4 +48,4 @@
 
   };
 
-})( jQuery );
+}));
