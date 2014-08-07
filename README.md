@@ -54,7 +54,7 @@ That's okay. Check out these handy non-jQuery versions maintained by other peopl
 ## In Use:
 - [Trent Walton](http://trentwalton.com)
 
-If you want more exact fitting text, there are plugins for that! We recommend checking out [BigText](https://github.com/zachleat/BigText) by Zach Leatherman or [SlabText](http://www.frequency-decoder.com/demo/slabText/) by Brian McAllister.
+If you want more exact fitting text, there are plugins for that! We recommend checking out [BigText](https://github.com/zachleat/BigText) by Zach Leatherman or [SlabText](https://github.com/freqDec/slabText) by Brian McAllister.
 
 ### Download, Fork, Commit.
 If you think you can make this better, please Download, Fork, & Commit. We'd love to see your ideas.
