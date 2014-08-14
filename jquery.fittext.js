@@ -19,25 +19,18 @@
 			  'maxFontSize' : Number.POSITIVE_INFINITY,
 			  'direction'   : String
 			}, options);
-		
-
 
 		return this.each(function(){
 
 			var d;
 			if ( settings.direction === 'height' ) {
 				d = 'height';
-			} else if ( settings.direction === 'both') {
-				d = 'both';
 			}
 
 			var $this = $(this);
 			
 			resizer = function () {
 				if (d === 'height'){
-					$this.css('font-size', Math.max(Math.min($(window).height() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
-				} else if (d === 'both') {
-					$this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
 					$this.css('font-size', Math.max(Math.min($(window).height() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
 				} else {
 					$this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
