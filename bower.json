@@ -6,7 +6,7 @@
     "jquery": ">= 1.6"
   },
   "ignore": [
-    "exemple.html",
+    "example.html",
     "CONTRIBUTING.md"
   ]
 }
