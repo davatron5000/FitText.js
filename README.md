@@ -28,7 +28,7 @@ This will hopefully give you a level of "control" that might not be pixel perfec
 FitText now allows you to specify two optional pixel values: `minFontSize` and `maxFontSize`. Great for situations when you want to preserve hierarchy.
 
 ```javascript
-jQuery("#responsive_headline").fitText(1.2, { minFontSize: '20px', maxFontSize: '40px' })
+jQuery("#responsive_headline").fitText(1.2, { minFontSize: '20px', maxFontSize: '40px' });
 ```
 
 ## CSS FAQ
