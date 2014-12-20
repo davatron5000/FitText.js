@@ -28,14 +28,7 @@
 
       // Resizer() resizes items based on the object width divided by the compressor * 10
       var resizer = function () {
-
-        // run if matchMedia is found and matches, or if it isn't found at all
-        if ( ( settings.matchMedia != null && typeof( matchMedia ) == 'function' ) ? ( matchMedia( settings.matchMedia ).matches ? true : false ) : true ) {
-          $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
-        } else {
-          $this.css('font-size', '');
-        }
-
+        $this.css('font-size', ( ( settings.matchMedia != null && typeof(matchMedia) == 'function' ) ? ( matchMedia(settings.matchMedia).matches ? true : false ) : true ) ? Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)) : '' );
       };
 
       // Call once to set.
