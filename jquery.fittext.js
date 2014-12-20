@@ -29,10 +29,8 @@
       // Resizer() resizes items based on the object width divided by the compressor * 10
       var resizer = function () {
 
-        // Boolean var to indicate if we should resize
-        var doResize = ( settings.matchMedia != null && typeof( matchMedia ) == 'function' ) ? ( matchMedia( settings.matchMedia ).matches ? true : false ) : true;
-
-        if ( doResize ) {
+        // run if matchMedia is found and matches, or if it isn't found at all
+        if ( ( settings.matchMedia != null && typeof( matchMedia ) == 'function' ) ? ( matchMedia( settings.matchMedia ).matches ? true : false ) : true ) {
           $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
         } else {
           $this.css('font-size', '');
