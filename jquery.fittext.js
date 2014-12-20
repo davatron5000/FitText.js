@@ -17,7 +17,8 @@
     var compressor = kompressor || 1,
         settings = $.extend({
           'minFontSize' : Number.NEGATIVE_INFINITY,
-          'maxFontSize' : Number.POSITIVE_INFINITY
+          'maxFontSize' : Number.POSITIVE_INFINITY,
+          'matchMedia'  : null
         }, options);
 
     return this.each(function(){
@@ -27,7 +28,16 @@
 
       // Resizer() resizes items based on the object width divided by the compressor * 10
       var resizer = function () {
-        $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+
+        // Boolean var to indicate if we should resize
+        var doResize = ( settings.matchMedia != null && typeof( matchMedia ) == 'function' ) ? ( matchMedia( settings.matchMedia ).matches ? true : false ) : true;
+
+        if ( doResize ) {
+          $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+        } else {
+          $this.css('font-size', '');
+        }
+
       };
 
       // Call once to set.

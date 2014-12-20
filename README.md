@@ -31,6 +31,13 @@ FitText now allows you to specify two optional pixel values: `minFontSize` and `
 jQuery("#responsive_headline").fitText(1.2, { minFontSize: '20px', maxFontSize: '40px' });
 ```
 
+## With matchMedia
+FitText allows you to pass in a `matchMedia` option that uses Paul Irish's [matchMedia.js](https://github.com/paulirish/matchMedia.js/) (if it's available - so you'll need to include it separately) and only runs fitText if the criteria matches.
+
+```javascript
+jQuery("#responsive_headline").fitText(1.2, { matchMedia: 'only screen and (min-width: 500px)' });
+```
+
 ## CSS FAQ
 
 - **Make sure your container has a width!**
