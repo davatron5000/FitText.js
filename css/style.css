@@ -18,7 +18,7 @@ a{
  	}
  	
 a:hover{
- 	color: #863027;}
+ 	color: #581b14;}
 
  	
 .download a{
@@ -44,7 +44,7 @@ p{
 	width: 80%;
 	max-width: 1440px;
 	margin: 0 auto;
- 	background-colord: #da4838;}
+	}
 
 img{
 	width: 96%;
@@ -57,12 +57,39 @@ header {
 	margin: 3.5% 0 4%;
 }
 
+#carbonads{
+  background: rgba(255,255,255, .075);
+  padding: 2%;
+  margin: 2% 0;
+  display: block;
+ 	overflow: hidden;
+}
+
+#carbonads a{
+  font-size: 0.8em;
+  text-decoration: none;
+}
+
+#carbonads img{
+  float: left;
+  margin: 0 2% 0 0;
+}
+
+#carbonads .carbon-text{
+  display: block;
+  margin-bottom: 0.5em;
+}
+
 footer{
-	border-top: .12em solid #f4f1de;
 	padding-top: 2%;
 	margin-top: 3%;
+	margin-bottom: 6%;
  	display: block;
- 	font-size: .8em;}
+}
+
+footer p{
+	font-size: 0.8em;
+}
 
 h1 {
 	text-align: center;
@@ -110,27 +137,37 @@ h1 span.char4 {
 
 @media screen and (min-width: 650px) and (max-width:1099px) {
 	p{	
-	font-size: 1.5em;
+	  font-size: 1.5em;
+	}
+  #carbonads a, footer p{	
+	  font-size: 1em;
 	}
 }
 
 
 @media screen and (min-width: 1100px) {
 	p{	
-	font-size: 2em;
+	  font-size: 2em;
+	}
+  #carbonads a, footer p{	
+	  font-size: 1.12em;
 	}
 }
 
 @media screen and (min-width: 1280px) {
 	p{	
-	font-size: 2.3em;
+	  font-size: 2.3em;
+	}
+  #carbonads a, footer p{	
+	  font-size: 1.25em;
 	}
 }
 
 @media screen and (min-width: 1400px) {
 	p{	
-	font-size: 2.75em;
+	  font-size: 2.75em;
 	}
 }
+
 
 
