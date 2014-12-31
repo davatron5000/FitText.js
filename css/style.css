@@ -18,7 +18,7 @@ a{
  	}
  	
 a:hover{
- 	color: #581b14;}
+ 	color: #4b1811;}
 
  	
 .download a{
@@ -47,10 +47,9 @@ p{
 	}
 
 img{
-	width: 96%;
-	max-width: 96%;
-	margin-bottom: 5%;
-	margin-top: 1%;
+	width: 100%;
+	margin: 1% auto 5%;
+	display: block;
 	}
 
 header {
@@ -58,11 +57,12 @@ header {
 }
 
 #carbonads{
-  background: rgba(255,255,255, .075);
+  background: rgba(0,0,0, 0.075);
   padding: 2%;
-  margin: 2% 0;
+  margin: 2% auto;
   display: block;
  	overflow: hidden;
+ 	border-radius: 0.25em;
 }
 
 #carbonads a{
@@ -77,7 +77,7 @@ header {
 
 #carbonads .carbon-text{
   display: block;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.25em;
 }
 
 footer{
@@ -130,8 +130,8 @@ h1 span.char4 {
 	margin-right: .035em;
 }
 
-::-moz-selection{ background: rgba(255,255,255, .3); color:#fff;  }
-::selection { background: rgba(255,255,255, .3); color: #fefcf2;  } 
+::-moz-selection{ background: rgba(0,0,0, 0.075); color:#fefcf2;  }
+::selection { background: rgba(0,0,0, 0.075); color: #fefcf2;  } 
 
 
 
