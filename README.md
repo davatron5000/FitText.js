@@ -31,6 +31,13 @@ FitText now allows you to specify two optional pixel values: `minFontSize` and `
 jQuery("#responsive_headline").fitText(1.2, { minFontSize: '20px', maxFontSize: '40px' });
 ```
 
+## Letter spacing
+The `spacing` option allows you to specify a value between `0` (default) and `1` which will add a letter spacing proportional to the size calculated by FitText. 
+
+```javascript
+jQuery("#responsive_headline").fitText(1.2, { spacing: 0.3 }); // Letter spacing will be 30% of the calculated size
+```
+
 ## CSS FAQ
 
 - **Make sure your container has a width!**
