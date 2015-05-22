@@ -20,6 +20,10 @@
           'maxFontSize' : Number.POSITIVE_INFINITY
         }, options);
 
+    $.fn.fitText.destroy = function destroy() {
+        $(window).off('resize.fittext orientationchange.fittext');
+    };
+
     return this.each(function(){
 
       // Store the object
