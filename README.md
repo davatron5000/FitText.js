@@ -33,11 +33,13 @@ jQuery("#responsive_headline").fitText(1.2, { minFontSize: '20px', maxFontSize: 
 
 ## CSS FAQ
 
-- **Make sure your container has a width!**
+- :warning: Run FitText before anything that hides the element you're trying to size (e.g. before Carousels, Scrollers, Accordions, Tabs, etc). Hiding an element's container removes its width. It can't resize without a width.
+- :warning: **Make sure your container has a width!**
   - `display: inline` elements don't have a width. Use `display: block` OR `display: inline-block`+ a specified width (i.e. `width: 100%`).
   - `position:absolute` elements need a specified width as well.
 - Tweak until you like it.
 - Set a No-JS fallback font-size in your CSS.
+- :new: If your text is full width, you might want to **NOT** use FitText and just use CSS `vw` units instead. Supported in all major browsers.
 
 ## Don't use jQuery?
 That's okay. Check out these handy non-jQuery versions maintained by other people.
