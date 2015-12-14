@@ -24,6 +24,11 @@
 
       // Store the object
       var $this = $(this);
+	  
+      // Check for compressor, min, and max data attributes on current active element
+      settings.compressor   = $this.data('compression') !== undefined ? $this.data('compression') : settings.compressor;
+      settings.minFontSize  = $this.data('min') !== undefined ? $this.data('min') : settings.minFontSize;
+      settings.maxFontSize  = $this.data('max') !== undefined ? $this.data('max') : settings.maxFontSize;
 
       // Resizer() resizes items based on the object width divided by the compressor * 10
       var resizer = function () {
