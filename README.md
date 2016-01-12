@@ -46,6 +46,8 @@ That's okay. Check out these handy non-jQuery versions maintained by other peopl
 
 - [non-jQuery FitText](https://github.com/adactio/FitText.js) from @adactio
 - [Angular.js FitText.js](https://github.com/patrickmarabeas/AngularJS-FitText.js) from @patrickmarabeas
+- [AMP-HTML FitText](https://github.com/ampproject/amphtml/tree/master/extensions/amp-fit-text)
+- [FitText UMD](https://github.com/peacechen/FitText-UMD) by @peacechen
 
 ## Changelog
 * `v 1.2` - Added `onorientationchange` event
