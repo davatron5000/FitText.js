@@ -24,10 +24,13 @@
 
       // Store the object
       var $this = $(this);
+      
+      // Set particular compressor for the object according to its data value
+      var compressator = $this.data('fittext-kompressor') || compressor;
 
       // Resizer() resizes items based on the object width divided by the compressor * 10
       var resizer = function () {
-        $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+        $this.css('font-size', Math.max(Math.min($this.width() / (compressator*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
       };
 
       // Call once to set.
