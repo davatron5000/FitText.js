@@ -20,14 +20,18 @@
           'maxFontSize' : Number.POSITIVE_INFINITY
         }, options);
 
-    return this.each(function(){
+    return this.each(function(index, element){
 
-      // Store the object
-      var $this = $(this);
-
+      // Store the object - now accepts classes for multiple objects to be resized
+      var $resizeArray = new Array();
+	    $resizeArray.push($(this));
+	  
       // Resizer() resizes items based on the object width divided by the compressor * 10
       var resizer = function () {
-        $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+        // Cycle through items captured in init
+  		  for(i = 0; i < $resizeArray.length; i++) {
+  			  $resizeArray[i].css('font-size', Math.max(Math.min($resizeArray[i].parents().eq(3).width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+  		  }
       };
 
       // Call once to set.
