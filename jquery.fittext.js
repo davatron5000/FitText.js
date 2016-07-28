@@ -17,7 +17,8 @@
     var compressor = kompressor || 1,
         settings = $.extend({
           'minFontSize' : Number.NEGATIVE_INFINITY,
-          'maxFontSize' : Number.POSITIVE_INFINITY
+          'maxFontSize' : Number.POSITIVE_INFINITY,
+          'inline': false
         }, options);
 
     return this.each(function(){
@@ -26,8 +27,18 @@
       var $this = $(this);
 
       // Resizer() resizes items based on the object width divided by the compressor * 10
+
+      var calculate = function () {
+        return Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize));
+      };
+
       var resizer = function () {
-        $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+        if (settings.inline === true) {
+          $this.css('display', 'block');
+          $this.css({'font-size': calculate(), 'display': 'inline-block'});
+        } else {
+          $this.css('font-size', calculate());
+        }
       };
 
       // Call once to set.
