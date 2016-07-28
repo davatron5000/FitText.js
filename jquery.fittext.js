@@ -12,6 +12,15 @@
 (function( $ ){
 
   $.fn.fitText = function( kompressor, options ) {
+    if (kompressor === 'destroy') {
+        return this.each(function(){
+            var uid = $(this).data('fitText.uid');
+            if (uid) {
+                $(window).off('.' + uid);
+            }
+        });
+        return;
+    }
 
     // Setup options
     var compressor = kompressor || 1,
@@ -32,9 +41,13 @@
 
       // Call once to set.
       resizer();
+      
+      // Create an event unique ID to allow unbinding 
+      var uid = Math.random().toString().replace(/^[0\.]+/, 'uid-');
+      $this.data('fitText.uid', uid);
 
       // Call on resize. Opera debounces their resize by default.
-      $(window).on('resize.fittext orientationchange.fittext', resizer);
+      $(window).on('resize.fittext.' + uid + ' orientationchange.fittext.' + uid, resizer);
 
     });
 
