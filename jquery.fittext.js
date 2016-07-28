@@ -17,7 +17,8 @@
     var compressor = kompressor || 1,
         settings = $.extend({
           'minFontSize' : Number.NEGATIVE_INFINITY,
-          'maxFontSize' : Number.POSITIVE_INFINITY
+          'maxFontSize' : Number.POSITIVE_INFINITY,
+          'resizeModifier' : ''
         }, options);
 
     return this.each(function(){
@@ -33,8 +34,12 @@
       // Call once to set.
       resizer();
 
+      if (settings.resizeModifier && settings.resizeModifier.length > 0) {
+        settings.resizeModifier = '.' + settings.resizeModifier
+      }
+
       // Call on resize. Opera debounces their resize by default.
-      $(window).on('resize.fittext orientationchange.fittext', resizer);
+      $(window).on('resize.fittext' + settings.resizeModifier + ' orientationchange.fittext' + settings.resizeModifier, resizer);
 
     });
 
