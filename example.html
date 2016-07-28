@@ -6,9 +6,9 @@
 
 	<style type="text/css">
 		body {
-		  background: #233a40; 
-		  color: #fff;
-		  font: 16px/1.8 sans-serif;
+			background: #233a40;
+			color: #fff;
+			font: 16px/1.8 sans-serif;
 		}
 		.container {
 			width: 84%;
@@ -32,6 +32,9 @@
 			#d45848 -4px 4px 0;
 			margin: 5% auto 5%;
 		}
+		#hidden {
+			display: none;
+		}
 	</style>
 
 	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -41,20 +44,22 @@
 
 	<div class="container">
 		<header>
-		<h1 id="fittext1">Squeeze with FitText</h1>
-		<h1 id="fittext2">Squeeze with FitText</h1>
-		<h1 id="fittext3">Squeeze with FitText</h1>
+			<h1 id="fittext1">Squeeze with FitText</h1>
+			<h1 id="fittext2">Squeeze with FitText</h1>
+			<h1 id="fittext3">Squeeze with FitText</h1>
 		</header>
+		<p id="hidden">Hidden text should not be scaled. But will be if we show it.</p>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	</div>
-	
+
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
  	<script src="jquery.fittext.js"></script>
 	<script type="text/javascript">
 		$("#fittext1").fitText();
 		$("#fittext2").fitText(1.2);
 		$("#fittext3").fitText(1.1, { minFontSize: '50px', maxFontSize: '75px' });
+		$("#hidden").fitText();
 	</script>
-	
+
 </body>
 </html>
