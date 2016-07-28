@@ -16,8 +16,11 @@
     // Setup options
     var compressor = kompressor || 1,
         settings = $.extend({
-          'minFontSize' : Number.NEGATIVE_INFINITY,
-          'maxFontSize' : Number.POSITIVE_INFINITY
+          'minFontSize'   : Number.NEGATIVE_INFINITY,
+          'maxFontSize'   : Number.POSITIVE_INFINITY,
+          'eventFunction' : function(resizer) {
+              $(window).on('resize.fittext orientationchange.fittext', resizer);
+          }
         }, options);
 
     return this.each(function(){
@@ -34,7 +37,7 @@
       resizer();
 
       // Call on resize. Opera debounces their resize by default.
-      $(window).on('resize.fittext orientationchange.fittext', resizer);
+      settings.eventFunction(resizer);
 
     });
 
