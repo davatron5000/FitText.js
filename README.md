@@ -31,6 +31,16 @@ FitText now allows you to specify two optional pixel values: `minFontSize` and `
 jQuery("#responsive_headline").fitText(1.2, { minFontSize: '20px', maxFontSize: '40px' });
 ```
 
+## Callback
+FitText supports a callback that will run once fitText has iterated over every item and done it's calculations.
+
+```javascript
+function callbackFunc() {
+    console.log('Done');
+}
+jQuery("#responsive_headline").fitText(1.2, {callback: callbackFunc});
+```
+
 ## CSS FAQ
 
 - :warning: Run FitText before anything that hides the element you're trying to size (e.g. before Carousels, Scrollers, Accordions, Tabs, etc). Hiding an element's container removes its width. It can't resize without a width.
