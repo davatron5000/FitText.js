@@ -25,9 +25,34 @@
       // Store the object
       var $this = $(this);
 
-      // Resizer() resizes items based on the object width divided by the compressor * 10
+      // Get initial letter & word spacing (converts to px units)
+      var size  = parseInt($this.css('font-size')); 
+      var space = parseInt($this.css('letter-spacing'));
+      var word  = parseInt($this.css('word-spacing'));
+
+      // Resizer() resizes items based on the object width divided by the 
+      // compressor * 10
       var resizer = function () {
-        $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+
+        var sizeNew = spaceNew = wordNew = 0;
+
+        // Determine new font-size
+        sizeNew  = Math.max(
+          Math.min(
+            $this.width() / (compressor*10), 
+            parseFloat(settings.maxFontSize)
+          ), 
+          parseFloat(settings.minFontSize)
+        );
+
+        spaceNew = space * (Math.min(size, sizeNew) / Math.max(size, sizeNew));
+        wordNew  = word  * (Math.min(size, sizeNew) / Math.max(size, sizeNew));
+
+        $this.css({
+          'font-size'      : sizeNew,
+          'letter-spacing' : spaceNew,
+          'word-spacing'   : wordNew
+        });
       };
 
       // Call once to set.
