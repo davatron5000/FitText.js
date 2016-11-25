@@ -11,33 +11,39 @@
 
 (function( $ ){
 
-  $.fn.fitText = function( kompressor, options ) {
+	$.fn.fitText = function( kompressor, options ) {
+		// Setup options
+		var compressor = kompressor || 1,
+			settings = $.extend({
+			  'minFontSize' : Number.NEGATIVE_INFINITY,
+			  'maxFontSize' : Number.POSITIVE_INFINITY,
+			  'direction'   : String
+			}, options);
 
-    // Setup options
-    var compressor = kompressor || 1,
-        settings = $.extend({
-          'minFontSize' : Number.NEGATIVE_INFINITY,
-          'maxFontSize' : Number.POSITIVE_INFINITY
-        }, options);
+		return this.each(function(){
 
-    return this.each(function(){
+			var d;
+			if ( settings.direction === 'height' ) {
+				d = 'height';
+			}
 
-      // Store the object
-      var $this = $(this);
+			var $this = $(this);
+			
+			resizer = function () {
+				if (d === 'height'){
+					$this.css('font-size', Math.max(Math.min($(window).height() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+				} else {
+					$this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+				}
+			};
+			
+			// Call once to set.
+			resizer();
 
-      // Resizer() resizes items based on the object width divided by the compressor * 10
-      var resizer = function () {
-        $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
-      };
+			// Call on resize. Opera debounces their resize by default.
+			$(window).on('resize.fittext orientationchange.fittext', resizer);
+		});
 
-      // Call once to set.
-      resizer();
-
-      // Call on resize. Opera debounces their resize by default.
-      $(window).on('resize.fittext orientationchange.fittext', resizer);
-
-    });
-
-  };
+	};
 
 })( jQuery );
