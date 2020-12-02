@@ -4,7 +4,7 @@
   "main": "dist/fittext.js",
   "module": "dist/fittext.module.js",
   "unpkg": "dist/fittext.umd.js",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "repository": "https://github.com/groundhogs/FitText.js.git",
   "license": "MIT",
   "devDependencies": {
