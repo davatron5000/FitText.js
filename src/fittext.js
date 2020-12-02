@@ -1,43 +1,64 @@
-/*global jQuery */
 /*!
 * FitText.js 1.2
 *
 * Copyright 2011, Dave Rupert http://daverupert.com
 * Released under the WTFPL license
 * http://sam.zoy.org/wtfpl/
-*
-* Date: Thu May 05 14:23:00 2011 -0600
+* 
+* Various modifications by Carlos Vergara <cfvergara@gmail.com>
+* also released under the WTFPL license
+* http://sam.zoy.org/wtfpl/
 */
 
-(function( $ ){
+if (Number.parseFloat === void 0) {
+	Number.parseFloat = parseFloat;
+}
 
-  $.fn.fitText = function( kompressor, options ) {
+const { NEGATIVE_INFINITY, POSITIVE_INFINITY, parseFloat } = Number;
 
-    // Setup options
-    var compressor = kompressor || 1,
-        settings = $.extend({
-          'minFontSize' : Number.NEGATIVE_INFINITY,
-          'maxFontSize' : Number.POSITIVE_INFINITY
-        }, options);
+const DEFAULT_OPTIONS = {
+	minFontSize: NEGATIVE_INFINITY,
+	maxFontSize: POSITIVE_INFINITY
+};
 
-    return this.each(function(){
+export default function FitText(selectorOrNodes) {
+	let workingNodes;
+	if (!selectorOrNodes) {
+		return;
+	}
+	if (selectorOrNodes instanceof NodeList) {
+		workingNodes = [ ...selectorOrNodes ];
+	}
+	if (selectorOrNodes instanceof HTMLElement) {
+		workingNodes = [ selectorOrNodes ];
+	}
+	if (selectorOrNodes.constructor === String) {
+		workingNodes = [ ...document.querySelectorAll(selectorOrNodes) ];
+	}
 
-      // Store the object
-      var $this = $(this);
+	return function ActualFitConstructor(compressionFactor = 1, options = {}) {
+		const compressor = compressionFactor;
+		const settings = {
+			...DEFAULT_OPTIONS,
+			...options
+		};
 
-      // Resizer() resizes items based on the object width divided by the compressor * 10
-      var resizer = function () {
-        $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
-      };
+		return workingNodes.forEach((node) => {
+			const resizer = function() {
+				node.style.fontSize =
+					Math.max(
+						Math.min(
+							node.clientWidth / (compressor * 10),
+							parseFloat(settings.maxFontSize)
+						),
+						parseFloat(settings.minFontSize)
+					) + 'px';
+			};
 
-      // Call once to set.
-      resizer();
+			resizer();
 
-      // Call on resize. Opera debounces their resize by default.
-      $(window).on('resize.fittext orientationchange.fittext', resizer);
-
-    });
-
-  };
-
-})( jQuery );
+			window.addEventListener('resize', resizer);
+			window.addEventListener('orientationchange', resizer);
+		});
+	};
+}
