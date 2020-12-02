@@ -9,14 +9,15 @@ const fitText = require("plainjs-fittext");
 fitText(".fit-text")(1.5);
 ```
 
-Your text should now fluidly resize, by default: Font-size = 1/10th of the element's width.
+Your text should now fluidly resize.
 
 ## The Compressor
 If your text is resizing poorly, you'll want to turn tweak up/down "The Compressor". It works a little like a guitar amp. The default is `1`.
 
 ```javascript
-jQuery("#responsive_headline").fitText(1.2); // Turn the compressor up   (resizes more aggressively)
-jQuery("#responsive_headline").fitText(0.8); // Turn the compressor down (resizes less aggressively)
+const 
+fitText("#responsive_headline")(1.2); // Turn the compressor up   (resizes more aggressively)
+fitText("#responsive_headline")(0.8); // Turn the compressor down (resizes less aggressively)
 ```
 
 This will hopefully give you a level of "control" that might not be pixel perfect, but resizes smoothly & nicely.
@@ -25,7 +26,7 @@ This will hopefully give you a level of "control" that might not be pixel perfec
 FitText now allows you to specify two optional pixel values: `minFontSize` and `maxFontSize`. Great for situations when you want to preserve hierarchy.
 
 ```javascript
-jQuery("#responsive_headline").fitText(1.2, { minFontSize: '20px', maxFontSize: '40px' });
+fitText("#responsive_headline")(1.2, { minFontSize: '20px', maxFontSize: '40px' });
 ```
 
 ## CSS FAQ
