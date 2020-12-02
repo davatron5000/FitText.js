@@ -1,0 +1,17 @@
+{
+  "name": "plainjs-fittext",
+  "source": "src/fittext.js",
+  "main": "dist/fittext.js",
+  "module": "dist/fittext.module.js",
+  "unpkg": "dist/fittext.umd.js",
+  "version": "1.2.1",
+  "repository": "https://github.com/groundhogs/FitText.js.git",
+  "license": "MIT",
+  "devDependencies": {
+    "microbundle": "0.12.4"
+  },
+  "scripts": {
+    "build": "microbundle",
+    "develop": "microbundle watch"
+  }
+}
