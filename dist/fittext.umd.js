@@ -1,0 +1,2 @@
+!function(n){"function"==typeof define&&define.amd?define(n):n()}(function(){var n;(n=jQuery).fn.fitText=function(t,e){var i=t||1,o=n.extend({minFontSize:Number.NEGATIVE_INFINITY,maxFontSize:Number.POSITIVE_INFINITY},e);return this.each(function(){var t=n(this),e=function(){t.css("font-size",Math.max(Math.min(t.width()/(10*i),parseFloat(o.maxFontSize)),parseFloat(o.minFontSize)))};e(),n(window).on("resize.fittext orientationchange.fittext",e)})}});
+//# sourceMappingURL=fittext.umd.js.map

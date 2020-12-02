@@ -1,0 +1,2 @@
+var t;(t=jQuery).fn.fitText=function(n,e){var i=n||1,a=t.extend({minFontSize:Number.NEGATIVE_INFINITY,maxFontSize:Number.POSITIVE_INFINITY},e);return this.each(function(){var n=t(this),e=function(){n.css("font-size",Math.max(Math.min(n.width()/(10*i),parseFloat(a.maxFontSize)),parseFloat(a.minFontSize)))};e(),t(window).on("resize.fittext orientationchange.fittext",e)})};
+//# sourceMappingURL=fittext.modern.js.map
